@@ -40,7 +40,6 @@ function applyTheme() {
   document.documentElement.setAttribute("data-theme", state.theme);
 }
 
-// --- Auth Logic ---
 function initLogin() {
   const form = document.getElementById("login-form");
   form.addEventListener("submit", (e) => {
@@ -215,7 +214,6 @@ function renderFeed() {
   </div>
 `;
 
-    // Toggle the comment input box visibility
     function toggleCommentBox(postId) {
       const commentSection = document.getElementById(
         `comment-section-${postId}`
@@ -223,7 +221,6 @@ function renderFeed() {
       commentSection.classList.toggle("hidden");
     }
 
-    // Add a comment to a post
     function addComment(postId) {
       const input = document.querySelector(
         `#comment-section-${postId} .comment-input`
@@ -236,13 +233,11 @@ function renderFeed() {
         return;
       }
 
-      // Add comment to the list
       const comment = document.createElement("div");
       comment.classList.add("comment");
       comment.innerHTML = `<span class="who">You:</span> ${commentText}`;
       commentList.appendChild(comment);
 
-      // Clear input
       input.value = "";
     }
 
