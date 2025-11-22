@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Feed — Mini Social</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="app">
+      <header class="main-header">
+        <div class="logo">Social app</div>
+
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Search posts..." />
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+
+        <div class="header-controls">
+          <select id="sort-select" class="sort-dropdown">
+            <option value="latest">Latest</option>
+            <option value="oldest">Oldest</option>
+            <option value="likes">Most Liked</option>
+          </select>
+
+          <button id="theme-toggle" class="icon-btn" title="Toggle Theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+
+          <div class="user-menu">
+            <span id="current-user-name">User</span>
+            <button id="signout-btn" class="btn-ghost">Sign Out</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="layout-grid">
+        <aside class="sidebar">
+          <div class="create-post-card">
+            <h3>Create Post</h3>
+            <textarea
+              id="post-text"
+              placeholder="What's on your mind?"
+              rows="3"
+            ></textarea>
+            <input
+              type="text"
+              id="post-image-url"
+              class="input-box"
+              placeholder="Image URL (optional)"
+            />
+            <button id="post-btn" class="primary-btn full-width">Post</button>
+          </div>
+        </aside>
+
+        <main class="feed-container">
+          <div id="feed"></div>
+        </main>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
